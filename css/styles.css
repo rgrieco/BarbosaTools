@@ -7,3 +7,20 @@
 .footer {
     position: center;
 }
+
+/* Estilo barra de busqueda */
+#search{
+    width: 835px; 
+    color: rgb(0,33,237);
+    margin-bottom: 16px;
+}
+
+/* Barra con categorias de productos */
+
+.categorias {
+    height: 130px;
+    max-width: 100%;
+    position: relative;
+    background-color: aqua;
+    display: flex;
+}
