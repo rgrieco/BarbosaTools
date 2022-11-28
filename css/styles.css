@@ -17,10 +17,38 @@
 
 /* Barra con categorias de productos */
 
-.categorias {
-    height: 130px;
+.wrap    { 
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }  
+  .wrap li {
+    height: 141px;
+    width: 128px;
+    margin: 2%;
+    box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1),
+    0.3em 0.3em 1em rgba(0,0,0,0.3);
+  }
+
+  .flex-container {
     max-width: 100%;
-    position: relative;
-    background-color: aqua;
+    padding: 1%;
+    margin: 0;
+    list-style: none;
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
     display: flex;
-}
+    justify-content: center; 
+  }
+
+  .flex-item {
+    padding: 5px;
+    width: 141px;
+    height: 128px;
+    margin: 10px;
+    line-height: 100px;
+    text-align: center;
+  }
