@@ -59,6 +59,26 @@
 . {
 }
 
-.envios {
+.flex-camion {
+  padding: 5px;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  line-height: 100px;
+  text-align: center;
   
+}
+
+.camion li{
+  height: 120px;
+  width: 200px;
+  margin: 2%;
+
+
+}
+#envios {
+  color: red;
+  align-self: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight:bold ;
 }
