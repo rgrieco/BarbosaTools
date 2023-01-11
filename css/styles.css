@@ -83,6 +83,8 @@
   font-weight:bold ;
 }
 
+
+
 /* Effectos de carrusel de productos*/
 
 #news-slider {
@@ -239,4 +241,12 @@
   .post-slide .post-content {
     padding: 0px 15px 25px 15px;
   }
+}
+
+
+
+/* Estilos del footer*/
+
+.socialMedia{
+  width: 30px;
 }
