@@ -277,3 +277,12 @@
 .my-float {
   margin-top: 16px;
 }
+
+.dbox .icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #46b5d1;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
