@@ -126,26 +126,22 @@
         <div class="row col-8">
           <!--Grid column-->
           <div class="col-md-8 col-xl-9">
-            <form
-              id="contact-form"
-              name="contact-form"
-              action="mail.php"
-              method="POST"
-              onsubmit="return validateForm()"
-            >
+            <form onsubmit="sendEmail(); reset(); return false;">
               <!--Grid row-->
               <div class="row">
                 <!--Grid column-->
                 <div class="col-md-6">
                   <div class="md-form">
-                    <div class="md-form">
+                    <div class="md-form" id="contactForm">
                       <input
                         type="text"
                         id="name"
                         name="name"
                         class="form-control"
+                        placeholder="Nombre:"
+                        required
                       />
-                      <label for="name" class="">Your name</label>
+                      
                     </div>
                   </div>
                 </div>
@@ -154,14 +150,16 @@
                 <!--Grid column-->
                 <div class="col-md-6">
                   <div class="md-form">
-                    <div class="md-form">
+                    <div class="md-form" id="contactForm">
                       <input
                         type="text"
                         id="email"
                         name="email"
                         class="form-control"
+                        placeholder="Correo Electrónico:"
+                        required
                       />
-                      <label for="email" class="">Your email</label>
+                      
                     </div>
                   </div>
                 </div>
@@ -172,14 +170,16 @@
               <!--Grid row-->
               <div class="row">
                 <div class="col-md-12">
-                  <div class="md-form">
+                  <div class="md-form" id="contactForm">
                     <input
                       type="text"
                       id="subject"
                       name="subject"
                       class="form-control"
+                      placeholder="Asunto:"
+                      required
                     />
-                    <label for="subject" class="">Subject</label>
+                    
                   </div>
                 </div>
               </div>
@@ -191,21 +191,23 @@
                 <div class="col-md-12">
                   <div class="md-form">
                     <textarea
-                      type="text"
+                    rows="10"
                       id="message"
                       name="message"
-                      class="md-textarea"
+                      class="form-control"
+                      placeholder="Escriba su mensaje aqui:"
+                      required
                     ></textarea>
-                    <label for="message">Your message</label>
                   </div>
                 </div>
-              </div>
+              </div> 
+              <div class="center-on-small-only" style="margin: 2%;">
+              <button type="submit">ENVIAR</button>
+            </div>
               <!--Grid row-->
             </form>
 
-            <div class="center-on-small-only">
-              <a class="btn btn-primary" onclick="validateForm()">Send</a>
-            </div>
+           
             <div class="status" id="status"></div>
           </div>
           <!--Grid column-->
@@ -229,6 +231,28 @@
         </div>
       </div>
       </div>
+
+ <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      function sendEmail() {
+        Email.send({
+          SecureToken: "af86aa13-e38a-46da-892a-4b772192fe98",
+          To: "griecorodrigo@gmail.com",
+          From: document.getElementById("email").value,
+          Subject: "Nuevo contacto WEB",
+          Body:
+            "Nombre:" +
+            document.getElementById("name").value +
+            "<br> Email: " +
+            document.getElementById("email").value +
+            "<br> Asunto: " +
+            document.getElementById("subject").value +
+            "<br> Mensaje: " +
+            document.getElementById("message").value,
+        }).then((message) => alert(message));
+      }
+    </script>
+
     </section>
     <!--Section: Contact v.2-->
 
@@ -236,16 +260,9 @@
   </body>
 
   <!-- SCRIPTS -->
-  <!-- JQuery -->
-  <script src="https:cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="js/popper.min.js"></script>
-  <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="js/bootstrap.js"></script>
-  <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="js/mdb.js"></script>
-  <!--Custom scripts-->
-  <script>
+
+
+ <!-- <script>
 
     function validateForm() {
          var x =  document.getElementById('name').value;
@@ -304,7 +321,7 @@
 
 
     }
-  </script>
+  </script>-->
 
   <script
     src="https:cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
@@ -316,5 +333,5 @@
     integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
     crossorigin="anonymous"
   ></script>
-  <script src="js/ejs.js"></script>
+  
 </html>
