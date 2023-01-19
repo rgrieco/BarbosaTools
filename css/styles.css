@@ -4,6 +4,10 @@
 
 }
 
+#pd{
+text-align: center;
+}
+
 .footer {
     position: center;
 }
@@ -145,6 +149,7 @@
   background: #fff;
   padding: 2px 20px 40px;
   border-radius: 15px;
+  text-align: center;
 }
 
 .post-slide .post-title a {
@@ -165,6 +170,7 @@
   line-height: 24px;
   color: #808080;
   margin-bottom: 25px;
+  text-align: center;
 }
 
 .post-slide .post-date {
