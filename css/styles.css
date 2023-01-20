@@ -18,6 +18,20 @@ text-align: center;
     color: rgb(0,33,237);
     margin-bottom: 16px;
 }
+@media screen and (max-width: 850px) {
+    #search{
+    width: 370px; 
+    color: rgb(0,33,237);
+    margin-bottom: 16px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #search{
+  width: 320px; 
+  color: rgb(0,33,237);
+  margin-bottom: 16px;
+}
+}
 
 /* Barra con categorias de productos */
 
