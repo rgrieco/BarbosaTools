@@ -12,6 +12,26 @@ text-align: center;
     position: center;
 }
 
+.container-fluid-personal{
+display: flex;
+flex-wrap: inherit;
+align-items: center;
+justify-content: space-evenly;
+}
+
+
+
+
+
+.historia {
+  position: relative;
+  margin-top: 100px;;
+  margin-left: 10%;
+  margin-right: 10%;
+  max-width: 80%;
+  max-height: 80%;
+}
+
 /* Estilo barra de busqueda */
 #search{
     width: 835px; 
