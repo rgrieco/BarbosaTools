@@ -1,11 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed&display=swap');
+
+
 .footers-icon {
     max-width: 30px;
     max-height: 30px;
-
 }
 
 #pd{
 text-align: center;
+font-family: 'Fira Sans Extra Condensed', sans-serif;
+color:#262625;
 }
 
 .footer {
@@ -17,10 +22,8 @@ display: flex;
 flex-wrap: inherit;
 align-items: center;
 justify-content: space-evenly;
+font-weight: 32px;
 }
-
-
-
 
 
 .historia {
@@ -30,6 +33,16 @@ justify-content: space-evenly;
   margin-right: 10%;
   max-width: 80%;
   max-height: 80%;
+  font-family: Arial;
+  font-size: 18px;
+}
+
+.titulo{
+text-align: center;
+font-size: 2rem;
+font-family: 'Roboto', sans-serif;
+color:#495B73;
+padding-top: 15px;
 }
 
 /* Estilo barra de busqueda */
